@@ -1,0 +1,114 @@
+/* ==========================================================================
+   ANIMATIONS & KEYFRAMES
+   Continuous luxury micro-animations & state transitions
+   ========================================================================== */
+
+/* Glowing audio button pulse ring */
+@keyframes musicPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(158, 90, 97, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(158, 90, 97, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(158, 90, 97, 0);
+  }
+}
+
+/* Continuous slow rotation for vinyl/music button when playing */
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Continuous gentle pulse for call button */
+@keyframes callPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 6px 18px rgba(105, 115, 88, 0.35);
+  }
+  50% {
+    transform: scale(1.06);
+    box-shadow: 0 10px 24px rgba(105, 115, 88, 0.55);
+  }
+}
+
+/* Continuous subtle floating sway for corner florals */
+@keyframes floatSway {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+}
+
+@keyframes floatSwayAlt {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(-1.5deg);
+  }
+}
+
+/* Sparkle pulse for AI button */
+@keyframes sparklePulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+/* Utility Animation Classes */
+.floating-action-btn--music {
+  animation: musicPulse 2.2s infinite;
+}
+
+.floating-action-btn--music.floating-action-btn--active svg {
+  animation: spinSlow 6s linear infinite;
+}
+
+.floating-action-btn--call {
+  animation: callPulse 2.5s ease-in-out infinite;
+}
+
+.hero-floral-corner img,
+.countdown-floral-corner img,
+.couple-corner-floral img,
+.location-floral-flourish img {
+  animation: floatSway 6s ease-in-out infinite;
+}
+
+.hero-floral-corner--top-right img,
+.hero-floral-corner--bottom-left img,
+.countdown-floral-corner--bottom-right img,
+.location-floral-flourish--top-right img {
+  animation: floatSwayAlt 7s ease-in-out infinite;
+}
+
+.ai-generate-wish-btn:hover svg {
+  animation: sparklePulse 0.8s ease-in-out infinite;
+}
+
+/* Wishes Slide Transition */
+.wishes-message-viewport {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.wishes-message-viewport.fade-out {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.wishes-message-viewport.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}

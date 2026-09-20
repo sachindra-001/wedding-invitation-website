@@ -1,0 +1,27 @@
+:root {
+  /* Elegant Wedding Color Palette */
+  --color-rose-wine: #9e5a61;
+  --color-rose-dark: #84454b;
+  --color-rose-light: #c7838b;
+  --color-sage-green: #697358;
+  --color-metallic-gold: #977B45;
+  --color-tan-champagne: #D9CCB7;
+  --color-ivory-white: #ffffff;
+  --color-blush-pink: #f3e4e4;
+  --color-bg-blush-gradient: linear-gradient(180deg, #ffffff 18.75%, #f3e4e4);
+
+  /* Typography */
+  --font-calligraphy: 'Arizonia', cursive;
+  --font-editorial-serif: 'Lora', serif;
+
+  /* Shadows & Elevation */
+  --shadow-subtle: 0 4px 10px rgba(0, 0, 0, 0.08);
+  --shadow-card: 0 10px 25px rgba(0, 0, 0, 0.12);
+  --shadow-elevated: 0 15px 35px rgba(0, 0, 0, 0.16);
+  --shadow-rose-glow: 0 6px 20px rgba(158, 90, 97, 0.45);
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}

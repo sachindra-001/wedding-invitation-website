@@ -1,0 +1,76 @@
+@import "https://fonts.googleapis.com/css2?family=Arizonia&family=Lora:ital,wght@0,400..700;1,400..700&display=swap";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  background-color: #ffffff;
+  color: #333333;
+  width: 100%;
+}
+
+/* 62.5% root scale (1rem = 10px) */
+html {
+  font-size: 62.5%;
+}
+
+/* Central layout container */
+.wedding-container {
+  max-width: 128rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #fbf5f5;
+}
+::-webkit-scrollbar-thumb {
+  background: #c7a4a9;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9e5a61;
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 650px) {
+  html {
+    font-size: 50%;
+  }
+  .wedding-container {
+    padding: 0 1.6rem;
+  }
+}

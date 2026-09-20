@@ -1,0 +1,8 @@
+/* ==========================================================================
+   APP STYLESHEET ENTRY POINT
+   Imports design tokens, keyframe animations, and section stylesheets
+   ========================================================================== */
+
+@import './styles/variables.css';
+@import './styles/animations.css';
+@import './styles/sections.css';
