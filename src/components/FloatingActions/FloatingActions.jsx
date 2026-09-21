@@ -39,11 +39,9 @@ function FloatingActions({ contactNumber, audioTrackUrl, contact, musicUrl }) {
     };
 
     window.addEventListener('click', handleFirstGesture, { once: true });
-    window.addEventListener('touchstart', handleFirstGesture, { once: true });
 
     return () => {
       window.removeEventListener('click', handleFirstGesture);
-      window.removeEventListener('touchstart', handleFirstGesture);
     };
   }, []);
 

@@ -4,7 +4,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
   scroll-behavior: smooth;
+  font-size: 62.5%;
 }
 
 html,
@@ -13,11 +17,6 @@ body {
   background-color: #ffffff;
   color: #333333;
   width: 100%;
-}
-
-/* 62.5% root scale (1rem = 10px) */
-html {
-  font-size: 62.5%;
 }
 
 /* Central layout container */
@@ -38,7 +37,6 @@ html {
   max-width: 100vw;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 button {
@@ -58,19 +56,4 @@ button {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #9e5a61;
-}
-
-@media (max-width: 900px) {
-  html {
-    font-size: 55%;
-  }
-}
-
-@media (max-width: 650px) {
-  html {
-    font-size: 50%;
-  }
-  .wedding-container {
-    padding: 0 1.6rem;
-  }
 }

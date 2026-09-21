@@ -1,11 +1,10 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { weddingAssets } from '../../data/weddingData';
 
 function Wishes({ wishes }) {
   const [currentWishIndex, setCurrentWishIndex] = useState(0);
   const [isFading, setIsFading] = useState(false);
-  const touchStartPositionRef = useRef(null);
   const totalWishesCount = wishes?.length || 1;
 
   const currentWishItem = wishes?.[currentWishIndex] || {
@@ -29,23 +28,6 @@ function Wishes({ wishes }) {
   const handleNextWish = () => {
     const nextIndex = currentWishIndex === totalWishesCount - 1 ? 0 : currentWishIndex + 1;
     changeWishWithAnimation(nextIndex);
-  };
-
-  const handleTouchStart = (event) => {
-    touchStartPositionRef.current = event.touches[0].clientX;
-  };
-
-  const handleTouchEnd = (event) => {
-    if (touchStartPositionRef.current === null) return;
-    const horizontalDistance = touchStartPositionRef.current - event.changedTouches[0].clientX;
-    if (Math.abs(horizontalDistance) > 40) {
-      if (horizontalDistance > 0) {
-        handleNextWish();
-      } else {
-        handlePreviousWish();
-      }
-    }
-    touchStartPositionRef.current = null;
   };
 
   return (
@@ -103,8 +85,6 @@ function Wishes({ wishes }) {
           <div className="wishes-slider-shell">
             <div
               className={`wishes-message-viewport ${isFading ? 'fade-out' : 'fade-in'}`}
-              onTouchStart={handleTouchStart}
-              onTouchEnd={handleTouchEnd}
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-delay="400"

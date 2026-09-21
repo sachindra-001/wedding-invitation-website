@@ -58,14 +58,18 @@ function Location({ venue, date }) {
         data-aos="fade-down-left"
         data-aos-duration="1200"
       >
-        <img src={weddingAssets.floralTopLeft} alt="" />
+        <div className="floral-mirror-x">
+          <img src={weddingAssets.floralTopLeft} alt="" />
+        </div>
       </div>
       <div
         className="location-floral-flourish location-floral-flourish--bottom-left"
         data-aos="fade-up-right"
         data-aos-duration="1200"
       >
-        <img src={weddingAssets.floralBottomRight} alt="" />
+        <div className="floral-mirror-x">
+          <img src={weddingAssets.floralBottomRight} alt="" />
+        </div>
       </div>
 
       <div className="wedding-container">

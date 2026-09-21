@@ -56,14 +56,6 @@ function WishForm({ onAddWish, brideName, groomName }) {
         alt=""
         className="send-wishes-texture-bg"
       />
-      <div
-        className="send-wishes-corner-floral"
-        data-aos="fade-right"
-        data-aos-duration="1200"
-        data-aos-delay="200"
-      >
-        <img src={weddingAssets.sendWishesFloralCorner} alt="" />
-      </div>
 
       <div className="wedding-container">
         <div className="send-wishes-layout">
@@ -126,27 +118,27 @@ function WishForm({ onAddWish, brideName, groomName }) {
                   data-aos-delay="500"
                   required
                 />
-                <textarea
-                  className="guest-form-textarea"
-                  placeholder={`Write your wishes for ${brideName || 'Ananya'} & ${groomName || 'Aarav'}...`}
-                  value={guestMessage}
-                  onChange={(e) => setGuestMessage(e.target.value)}
-                  data-aos="fade-up"
-                  data-aos-duration="800"
-                  data-aos-delay="550"
-                  required
-                />
-
-                <button
-                  type="button"
-                  className="ai-generate-wish-btn"
-                  onClick={handleGenerateWishAI}
-                  data-aos="zoom-in"
-                  data-aos-duration="800"
-                  data-aos-delay="600"
-                >
-                  <Sparkles size={16} /> Write with AI
-                </button>
+                <div className="guest-form-textarea-wrapper">
+                  <textarea
+                    className="guest-form-textarea"
+                    placeholder="Your Wishes"
+                    value={guestMessage}
+                    onChange={(e) => setGuestMessage(e.target.value)}
+                    data-aos="fade-up"
+                    data-aos-duration="800"
+                    data-aos-delay="550"
+                    required
+                  />
+                  <button
+                    type="button"
+                    className="ai-generate-sparkle-btn"
+                    onClick={handleGenerateWishAI}
+                    title="Generate wish with AI"
+                    aria-label="Generate wish with AI"
+                  >
+                    <Sparkles size={16} />
+                  </button>
+                </div>
 
                 {isSubmitted && (
                   <p className="wish-submitted-alert">
@@ -162,7 +154,7 @@ function WishForm({ onAddWish, brideName, groomName }) {
                   data-aos-duration="800"
                   data-aos-delay="650"
                 >
-                  Send Wish
+                  Submit
                 </button>
               </form>
 

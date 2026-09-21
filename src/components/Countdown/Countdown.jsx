@@ -67,7 +67,7 @@ function Countdown({ targetDate }) {
               data-aos-delay="300"
             >
               <span className="timer-digit">{String(timeRemaining.days).padStart(2, '0')}</span>
-              <span className="timer-label">Days</span>
+              <span className="timer-label">DAYS</span>
             </div>
             <div
               className="timer-unit-box"
@@ -76,7 +76,7 @@ function Countdown({ targetDate }) {
               data-aos-delay="400"
             >
               <span className="timer-digit">{String(timeRemaining.hours).padStart(2, '0')}</span>
-              <span className="timer-label">Hours</span>
+              <span className="timer-label">HRS</span>
             </div>
             <div
               className="timer-unit-box"
@@ -85,7 +85,7 @@ function Countdown({ targetDate }) {
               data-aos-delay="500"
             >
               <span className="timer-digit">{String(timeRemaining.minutes).padStart(2, '0')}</span>
-              <span className="timer-label">Mins</span>
+              <span className="timer-label">MINS</span>
             </div>
             <div
               className="timer-unit-box"
@@ -94,7 +94,7 @@ function Countdown({ targetDate }) {
               data-aos-delay="600"
             >
               <span className="timer-digit">{String(timeRemaining.seconds).padStart(2, '0')}</span>
-              <span className="timer-label">Secs</span>
+              <span className="timer-label">SECS</span>
             </div>
           </div>
         </div>

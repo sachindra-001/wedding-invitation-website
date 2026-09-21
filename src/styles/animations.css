@@ -16,6 +16,18 @@
   }
 }
 
+@keyframes audioPulseGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(158, 90, 97, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(158, 90, 97, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(158, 90, 97, 0);
+  }
+}
+
 /* Continuous slow rotation for vinyl/music button when playing */
 @keyframes spinSlow {
   from {
@@ -90,7 +102,8 @@
 .hero-floral-corner--top-right img,
 .hero-floral-corner--bottom-left img,
 .countdown-floral-corner--bottom-right img,
-.location-floral-flourish--top-right img {
+.location-floral-flourish--top-right img,
+.location-floral-flourish--bottom-left img {
   animation: floatSwayAlt 7s ease-in-out infinite;
 }
 
